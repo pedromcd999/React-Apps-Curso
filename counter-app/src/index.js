@@ -6,4 +6,4 @@ import "./index.css";
 
 const divRoot = document.querySelector("#root");
 
-createRoot(divRoot).render(<PrimeraApp />);
+createRoot(divRoot).render(<PrimeraApp/>);

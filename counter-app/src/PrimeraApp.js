@@ -3,15 +3,11 @@ import React from 'react';
 
 
 //Functional components
-const PrimeraApp = () => {
+const PrimeraApp = ({saludo = 'Hola mundo'}) => {
 
     return (
-        // <Fragment>
-        //     <h1>Hola Mundo</h1>
-        //     <p>Mi componente en react</p>
-        // </Fragment>
         <>
-            <p>Mi componente en react</p>
+            <h1>{saludo}</h1>
         </>
     );
 

@@ -1,0 +1,1 @@
+rafcp -- crea un componente funcional con las inmportaciones ya hechas

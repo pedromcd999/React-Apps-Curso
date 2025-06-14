@@ -1,21 +1,32 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-const CounterApp = ({ valor }) => {
 
+const CounterApp = ({ value = 10 }) => {
 
+    const [counter, setCount] = useState(value);
 
-    //handleAdd
-    const handleAdd = (e) => {
-        console.log(e)
+    const handleAdd = () => {
+        setCount((c) => c + 1)
+    }
+
+    const handleSubstract = () => {
+        if (counter >= 1)
+            setCount(counter - 1)
     }
 
     return (
         <>
-            <h1>CounterApp</h1>
-            <h2>{valor}</h2>
+            <div className='counter-container'>
+                <h1 className='container-title'>CounterApp</h1>
+                <h2 className='counter-value'>{counter}</h2>
+                <div className='buttons'>
+                    <button className='button button-increment' onClick={handleAdd}>Increment</button>
+                    <button className="button button-restart" onClick={() => setCount(value)}>Restart</button>
+                    <button className="button button-substract" onClick={handleSubstract}>Substract</button>
+                </div>
+            </div>
 
-            <button className='button' onClick={handleAdd}>+ 1</button>
         </>
     );
 }

@@ -10,6 +10,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lusitana.className} antialiased`}>
         {children}
+        <footer className='flex justify-center'>
+          Hecho por Pedro
+        </footer>
       </body>
     </html>
   );
